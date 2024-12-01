@@ -1,0 +1,158 @@
+
+body{
+    background-image: url(https://assets.epuzzle.info/puzzle/088/911/original.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+.pata{
+    display: none;
+}
+
+nav{
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
+    background-color: #c76e2e;
+}
+img{
+    width: 5rem;
+}
+
+h1{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #d46b1f;
+}
+.container{
+    width: 25vw;
+    height: 45vh;
+    backdrop-filter: blur(3px);
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    background-color: rgb(0, 0,0,0.5);
+    border-radius: 28px;
+}
+.boton{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+}
+#actualizar{
+    background-color: #c76e2e;
+}
+#actualizar , #generar{
+    padding: .8rem 2.3rem;
+    background-color: #c76e2e;
+    border: none;
+    border-radius: 2px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+#actualizar , #generar:hover{
+    background-color: #ff6a00;
+    transition: .8s;
+}
+#inicial{
+    padding: 1rem;
+}
+#crear{
+    padding: 1rem;
+}
+#mejores{
+    padding: 1rem;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2rem;
+    margin: 2rem;
+}
+nav a:hover{
+    color: bisque;
+    transition: .5s;
+}
+
+.container input{
+    padding: 1.5rem;
+    margin: 1.5rem;
+    font-size: 1.5rem;
+}
+#color{
+    padding: 0;
+    margin: 0;
+    background-color:transparent;
+    border: none;
+    width: 5rem;
+    height: 3rem;
+    margin: 1.5rem;
+}
+.contenedor{
+    display: flex;
+    margin:0 10rem ;
+}
+canvas{
+    border: 2rem;
+    height: 40rem;
+    width: 40rem;
+}
+#menu{
+    opacity: 0;
+}
+
+@media  (max-width: 900px) {
+    .contenedor{
+        flex-direction: column;
+        margin: 1rem;
+    }
+    .container{
+        width: 100%;
+    }
+    canvas{
+        width: 100%;
+    }
+    .nav-right{
+        display: none;
+        translate: 10rem 30rem;
+        background-color: #c76e2e;
+        width: 80vw;
+        height: 100vw;
+        z-index: 10;
+    }
+    .pata{
+        display: block;
+        width: 2rem;
+        margin-left: 2rem;
+    }
+    nav{
+        justify-content: space-between;
+    }
+    #menu:checked+.menu-label+.nav-right{
+        display: block;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+    } 
+}
+
+@media  (max-width: 500px) {
+    #actualizar , #generar{
+        padding: 1rem;
+        font-size: .8rem;
+    }
+    #color{
+        padding: 0rem;
+        margin: 0 1.5rem;
+    }
+    .nav-right{
+        translate: 10rem 15rem;
+    }
+}
